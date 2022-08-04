@@ -25,8 +25,12 @@ spec:
     targetRevision: 0.1.0
     helm:
       parameters:
+      - name: metadata.labels.app.kubernetes.io/instance
+        value: ibm-licensing-operator
       - name: metadata.labels.app.kubernetes.io/managed-by
         value: ibm-licensing-operator
+      - name: metadata.labels.app.kubernetes.io/name
+        value: ibm-licensing
       - name: metadata.name
         value: ibm-licensing
       - name: metadata.namespace
