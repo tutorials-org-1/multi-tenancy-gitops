@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ibm-licensing-operator
+  name: ibm-license-service-instance
   annotations:
     argocd.argoproj.io/sync-wave: "275"
   labels:
@@ -20,7 +20,7 @@ spec:
       prune: true
       selfHeal: true
   source:
-    chart: ibm-license-service-instance
+    chart: ibm-licensing-operator # ibm-license-service-instance
     repoURL: "" # Populated by kustomize patches in 2-services/kustomization.yaml
     targetRevision: 0.1.0
     helm:
