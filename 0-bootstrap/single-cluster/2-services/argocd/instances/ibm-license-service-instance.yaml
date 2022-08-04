@@ -36,6 +36,4 @@ spec:
       - name: spec.httpsEnable
         value: "true"
       - name: spec.version
-        value: 1.16.1
-      - name: metadata.labels
-        value: "app.kubernetes.io/instance: ibm-licensing-operator"
+        value: 1.10.0
