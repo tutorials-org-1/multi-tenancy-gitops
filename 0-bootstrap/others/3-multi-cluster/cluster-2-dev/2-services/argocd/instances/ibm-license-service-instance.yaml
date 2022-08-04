@@ -25,10 +25,8 @@ spec:
     targetRevision: 0.1.0
     helm:
       parameters:
-      - name: metadata.labels.app.kubernetes.io/instance
-        value: ibm-licensing-operator
       - name: metadata.name
-        value: ibm-licensing
+        value: instance #ibm-licensing
       - name: metadata.namespace
         value: ibm-common-services
       - name: spec.apiSecretToken
