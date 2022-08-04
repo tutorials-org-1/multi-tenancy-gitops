@@ -20,11 +20,13 @@ spec:
       prune: true
       selfHeal: true
   source:
-    chart: ibm-licensing-operator # ibm-license-service-instance
+    chart: ibm-license-service-instance
     repoURL: "" # Populated by kustomize patches in 2-services/kustomization.yaml
     targetRevision: 0.1.0
     helm:
       parameters:
+      - name: metadata.labels.app.kubernetes.io/instance
+        value: ibm-licensing-operator
       - name: metadata.name
         value: ibm-licensing
       - name: metadata.namespace
